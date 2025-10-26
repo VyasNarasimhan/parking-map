@@ -1,0 +1,18 @@
+camera:
+  snapshot_file: C:\Users\athar\OneDrive\QueueUp App Startup\Image Recognition\snap.jpg
+model:
+  weights: yolov8n.pt
+  conf: 0.35
+spot:
+  box:
+    x: 631
+    y: 353
+    w: 217
+    h: 130
+  overlap_threshold: 0.12
+  empty_image: C:\Users\athar\OneDrive\QueueUp App Startup\Image Recognition\snap.jpg
+  ssim_threshold: 0.88
+output:
+  dir: spot_out
+  rotate: null
+  draw_overlay: true
