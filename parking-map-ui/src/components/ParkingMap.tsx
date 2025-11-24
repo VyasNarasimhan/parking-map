@@ -1,7 +1,7 @@
 'use client'; // This directive is crucial for components using hooks/browser APIs
 
 import React, { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Polygon, Marker, useMapEvents } from 'react-leaflet';
+import { MapContainer, Polygon, Marker, useMapEvents, useMap } from 'react-leaflet';
 import L from 'leaflet';
 
 // --- Configuration ---
@@ -9,6 +9,57 @@ const FLASK_API_URL = "http://127.0.0.1:5000";
 const MAP_CENTER: L.LatLngExpression = [38.0336, -78.5080];
 const INITIAL_ZOOM = 17;
 const ZOOM_THRESHOLD = 18;
+const SATELLITE_TILE_URL = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}";
+const SATELLITE_TILE_OPTS: L.TileLayerOptions = {
+  maxNativeZoom: 19,
+  maxZoom: 28,
+  noWrap: true,
+  bounds: [[-90, -180], [90, 180]],
+  attribution:
+    "Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community"
+};
+
+const availabilityColor = (percentageOpen: number) => {
+  if (percentageOpen >= 50) return '#2ecc71'; // green-ish
+  if (percentageOpen >= 25) return '#f1c40f'; // yellow
+  return '#e74c3c'; // red
+};
+
+// --- Satellite Tile Layer that stretches past provider zoom ---
+const SatelliteTileLayer = () => {
+  const map = useMap();
+
+  useEffect(() => {
+    const tileLayer = L.tileLayer(SATELLITE_TILE_URL, SATELLITE_TILE_OPTS);
+    const originalGetTileUrl = tileLayer.getTileUrl.bind(tileLayer);
+
+    tileLayer.getTileUrl = (coords: L.Coords) => {
+      const maxNative = tileLayer.options.maxNativeZoom ?? coords.z;
+
+      if (coords.z > maxNative) {
+        const zoomDiff = coords.z - maxNative;
+        const scale = 2 ** zoomDiff;
+        const stretchedCoords = {
+          ...coords,
+          z: maxNative,
+          x: Math.floor(coords.x / scale),
+          y: Math.floor(coords.y / scale)
+        } as L.Coords;
+
+        return originalGetTileUrl(stretchedCoords);
+      }
+
+      return originalGetTileUrl(coords);
+    };
+
+    tileLayer.addTo(map);
+    return () => {
+      map.removeLayer(tileLayer);
+    };
+  }, [map]);
+
+  return null;
+};
 
 // --- Helper Component to manage zoom-based rendering ---
 const ParkingLayers = ({ lots }: { lots: any[] }) => {
@@ -32,6 +83,7 @@ const SummaryView = ({ lots }: { lots: any[] }) => {
         const available_spaces = total_spaces - occupied_spaces;
         const occupancy_rate = occupied_spaces / total_spaces;
         const percentage_open = (available_spaces / total_spaces) * 100;
+        const percentageColor = availabilityColor(percentage_open);
 
         let summary_color = 'green';
         if (occupancy_rate > 0.8) summary_color = 'red';
@@ -43,7 +95,21 @@ const SummaryView = ({ lots }: { lots: any[] }) => {
 
         const labelIcon = L.divIcon({
           className: 'lot-label',
-          html: `<b>${lot.name}</b><br>${percentage_open.toFixed(0)}% Open`,
+          html: `
+            <div style="
+              text-align:center;
+              font-size:12px;
+              font-weight:600;
+              color:#fff;
+              background:${percentageColor};
+              padding:6px;
+              border-radius:8px;
+              box-shadow:0 2px 6px rgba(0,0,0,0.25);
+            ">
+              <div>${lot.name}</div>
+              <div style="margin-top:2px;">${percentage_open.toFixed(0)}% Open</div>
+            </div>
+          `,
           iconSize: [150, 36],
           iconAnchor: [75, 18]
         });
@@ -105,15 +171,12 @@ export default function ParkingMap() {
     <MapContainer
       center={MAP_CENTER}
       zoom={INITIAL_ZOOM}
-      maxZoom={22}
+      maxZoom={28}
+      zoomSnap={1}
+      zoomDelta={1}
       className="map-container"
     >
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        maxZoom={19}
-        noWrap={true}
-        bounds={[[ -90, -180 ], [ 90, 180 ]]}
-      />
+      <SatelliteTileLayer />
       <ParkingLayers lots={lots} />
     </MapContainer>
   );

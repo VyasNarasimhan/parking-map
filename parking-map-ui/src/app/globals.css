@@ -11,13 +11,13 @@ body {
 
 /* Style for the custom text labels on the map */
 .lot-label {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 5px 8px;
-  font-size: 14px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 13px;
   font-family: sans-serif;
   font-weight: bold;
   text-align: center;
   white-space: nowrap;
+  box-shadow: none;
 }
