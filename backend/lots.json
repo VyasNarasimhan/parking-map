@@ -22,7 +22,7 @@
                         -78.51188450000001
                     ]
                 ],
-                "occupied": true
+                "occupied": false
             },
             {
                 "id": 1,
@@ -66,7 +66,7 @@
                         -78.51184012068967
                     ]
                 ],
-                "occupied": true
+                "occupied": false
             },
             {
                 "id": 3,
@@ -110,7 +110,7 @@
                         -78.51179574137932
                     ]
                 ],
-                "occupied": false
+                "occupied": true
             },
             {
                 "id": 5,
@@ -132,7 +132,7 @@
                         -78.51177355172415
                     ]
                 ],
-                "occupied": true
+                "occupied": false
             },
             {
                 "id": 6,
@@ -198,7 +198,7 @@
                         -78.51170698275862
                     ]
                 ],
-                "occupied": false
+                "occupied": true
             },
             {
                 "id": 9,
@@ -220,7 +220,7 @@
                         -78.51168479310346
                     ]
                 ],
-                "occupied": false
+                "occupied": true
             },
             {
                 "id": 10,
@@ -242,7 +242,7 @@
                         -78.51166260344829
                     ]
                 ],
-                "occupied": false
+                "occupied": true
             },
             {
                 "id": 11,
@@ -264,7 +264,7 @@
                         -78.5116404137931
                     ]
                 ],
-                "occupied": true
+                "occupied": false
             },
             {
                 "id": 12,
@@ -308,7 +308,7 @@
                         -78.51159603448276
                     ]
                 ],
-                "occupied": true
+                "occupied": false
             },
             {
                 "id": 14,
@@ -352,7 +352,7 @@
                         -78.51155165517241
                     ]
                 ],
-                "occupied": true
+                "occupied": false
             },
             {
                 "id": 16,
@@ -396,7 +396,7 @@
                         -78.51150727586207
                     ]
                 ],
-                "occupied": false
+                "occupied": true
             },
             {
                 "id": 18,
@@ -418,7 +418,7 @@
                         -78.5114850862069
                     ]
                 ],
-                "occupied": true
+                "occupied": false
             },
             {
                 "id": 19,
@@ -440,7 +440,7 @@
                         -78.51146289655172
                     ]
                 ],
-                "occupied": true
+                "occupied": false
             },
             {
                 "id": 20,
@@ -528,7 +528,7 @@
                         -78.51137413793103
                     ]
                 ],
-                "occupied": false
+                "occupied": true
             },
             {
                 "id": 24,
@@ -550,7 +550,7 @@
                         -78.51135194827586
                     ]
                 ],
-                "occupied": true
+                "occupied": false
             },
             {
                 "id": 25,
@@ -572,7 +572,7 @@
                         -78.51132975862069
                     ]
                 ],
-                "occupied": false
+                "occupied": true
             },
             {
                 "id": 26,
@@ -594,7 +594,7 @@
                         -78.51130756896552
                     ]
                 ],
-                "occupied": true
+                "occupied": false
             },
             {
                 "id": 27,
@@ -616,7 +616,7 @@
                         -78.51128537931034
                     ]
                 ],
-                "occupied": false
+                "occupied": true
             },
             {
                 "id": 28,
@@ -660,7 +660,7 @@
                         -78.511848
                     ]
                 ],
-                "occupied": false
+                "occupied": true
             },
             {
                 "id": 30,
@@ -682,7 +682,7 @@
                         -78.51182572413794
                     ]
                 ],
-                "occupied": false
+                "occupied": true
             },
             {
                 "id": 31,
@@ -726,7 +726,7 @@
                         -78.51178117241379
                     ]
                 ],
-                "occupied": false
+                "occupied": true
             },
             {
                 "id": 33,
@@ -748,7 +748,7 @@
                         -78.51175889655173
                     ]
                 ],
-                "occupied": true
+                "occupied": false
             },
             {
                 "id": 34,
@@ -770,7 +770,7 @@
                         -78.51173662068966
                     ]
                 ],
-                "occupied": false
+                "occupied": true
             },
             {
                 "id": 35,
@@ -836,7 +836,7 @@
                         -78.51166979310345
                     ]
                 ],
-                "occupied": true
+                "occupied": false
             },
             {
                 "id": 38,
@@ -858,7 +858,7 @@
                         -78.51164751724139
                     ]
                 ],
-                "occupied": false
+                "occupied": true
             },
             {
                 "id": 39,
@@ -902,7 +902,7 @@
                         -78.51160296551724
                     ]
                 ],
-                "occupied": false
+                "occupied": true
             },
             {
                 "id": 41,
@@ -1012,7 +1012,7 @@
                         -78.5114915862069
                     ]
                 ],
-                "occupied": false
+                "occupied": true
             },
             {
                 "id": 46,
@@ -1034,7 +1034,7 @@
                         -78.51146931034482
                     ]
                 ],
-                "occupied": true
+                "occupied": false
             },
             {
                 "id": 47,
@@ -1144,7 +1144,7 @@
                         -78.51135793103448
                     ]
                 ],
-                "occupied": true
+                "occupied": false
             },
             {
                 "id": 52,
