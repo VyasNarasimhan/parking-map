@@ -138,7 +138,13 @@ const DetailedView = ({ lots }: { lots: any[] }) => {
           <Polygon
             key={space.id}
             positions={space.coords}
-            pathOptions={{ color: space.occupied ? 'red' : 'green', weight: 1, fillOpacity: 0.5 }}
+            pathOptions={{
+              color: space.occupied ? '#8b0000' : '#006400', // darker border
+              fillColor: space.occupied ? 'red' : 'green',
+              weight: 1.5,
+              opacity: 1,
+              fillOpacity: 1,
+            }}
             eventHandlers={{ click: () => alert(`${lot.name} - Space ${space.id} (${space.occupied ? 'Occupied' : 'Available'})`) }}
           />
         ))
