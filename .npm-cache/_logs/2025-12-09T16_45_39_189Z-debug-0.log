@@ -1,0 +1,289 @@
+0 verbose cli /opt/homebrew/Cellar/node/25.2.1/bin/node /opt/homebrew/bin/npm
+1 info using npm@11.6.2
+2 info using node@v25.2.1
+3 silly config load:file:/opt/homebrew/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/vyas/code/parking-map/parking-map-ui/.npmrc
+5 silly config load:file:/Users/vyas/.npmrc
+6 silly config load:file:/opt/homebrew/etc/npmrc
+7 verbose title npm install @react-google-maps/api
+8 verbose argv "install" "@react-google-maps/api"
+9 verbose logfile logs-max:10 dir:/Users/vyas/code/parking-map/.npm-cache/_logs/2025-12-09T16_45_39_189Z-
+10 verbose logfile /Users/vyas/code/parking-map/.npm-cache/_logs/2025-12-09T16_45_39_189Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly idealTree buildDeps
+14 silly fetch manifest @react-google-maps/api@*
+15 silly packumentCache full:https://registry.npmjs.org/@react-google-maps%2fapi cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/@react-google-maps%2fapi 187ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/@react-google-maps%2fapi set size:undefined disposed:false
+18 silly fetch manifest react@19.1.0
+19 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/react 235ms (cache miss)
+21 silly packumentCache full:https://registry.npmjs.org/react set size:undefined disposed:false
+22 silly fetch manifest react-dom@19.1.0
+23 silly packumentCache full:https://registry.npmjs.org/react-dom cache-miss
+24 http fetch GET 200 https://registry.npmjs.org/react-dom 612ms (cache miss)
+25 silly packumentCache full:https://registry.npmjs.org/react-dom set size:undefined disposed:false
+26 silly placeDep ROOT @react-google-maps/api@2.20.7 OK for: parking-map-ui@0.1.0 want: *
+27 silly fetch manifest @googlemaps/js-api-loader@1.16.8
+28 silly packumentCache full:https://registry.npmjs.org/@googlemaps%2fjs-api-loader cache-miss
+29 silly fetch manifest @googlemaps/markerclusterer@2.5.3
+30 silly packumentCache full:https://registry.npmjs.org/@googlemaps%2fmarkerclusterer cache-miss
+31 silly fetch manifest @react-google-maps/infobox@2.20.0
+32 silly packumentCache full:https://registry.npmjs.org/@react-google-maps%2finfobox cache-miss
+33 silly fetch manifest @react-google-maps/marker-clusterer@2.20.0
+34 silly packumentCache full:https://registry.npmjs.org/@react-google-maps%2fmarker-clusterer cache-miss
+35 silly fetch manifest @types/google.maps@3.58.1
+36 silly packumentCache full:https://registry.npmjs.org/@types%2fgoogle.maps cache-miss
+37 silly fetch manifest invariant@2.2.4
+38 silly packumentCache full:https://registry.npmjs.org/invariant cache-miss
+39 http fetch GET 200 https://registry.npmjs.org/@googlemaps%2fjs-api-loader 61ms (cache miss)
+40 silly packumentCache full:https://registry.npmjs.org/@googlemaps%2fjs-api-loader set size:undefined disposed:false
+41 http fetch GET 200 https://registry.npmjs.org/invariant 109ms (cache miss)
+42 silly packumentCache full:https://registry.npmjs.org/invariant set size:undefined disposed:false
+43 http fetch GET 200 https://registry.npmjs.org/@react-google-maps%2fmarker-clusterer 111ms (cache miss)
+44 silly packumentCache full:https://registry.npmjs.org/@react-google-maps%2fmarker-clusterer set size:undefined disposed:false
+45 http fetch GET 200 https://registry.npmjs.org/@googlemaps%2fmarkerclusterer 127ms (cache miss)
+46 silly packumentCache full:https://registry.npmjs.org/@googlemaps%2fmarkerclusterer set size:undefined disposed:false
+47 http fetch GET 200 https://registry.npmjs.org/@types%2fgoogle.maps 136ms (cache miss)
+48 silly packumentCache full:https://registry.npmjs.org/@types%2fgoogle.maps set size:undefined disposed:false
+49 http fetch GET 200 https://registry.npmjs.org/@react-google-maps%2finfobox 144ms (cache miss)
+50 silly packumentCache full:https://registry.npmjs.org/@react-google-maps%2finfobox set size:undefined disposed:false
+51 silly placeDep ROOT @googlemaps/js-api-loader@1.16.8 OK for: @react-google-maps/api@2.20.7 want: 1.16.8
+52 silly placeDep ROOT @googlemaps/markerclusterer@2.5.3 OK for: @react-google-maps/api@2.20.7 want: 2.5.3
+53 silly placeDep ROOT @react-google-maps/infobox@2.20.0 OK for: @react-google-maps/api@2.20.7 want: 2.20.0
+54 silly placeDep ROOT @react-google-maps/marker-clusterer@2.20.0 OK for: @react-google-maps/api@2.20.7 want: 2.20.0
+55 silly placeDep ROOT @types/google.maps@3.58.1 OK for: @react-google-maps/api@2.20.7 want: 3.58.1
+56 silly placeDep ROOT invariant@2.2.4 OK for: @react-google-maps/api@2.20.7 want: 2.2.4
+57 silly fetch manifest supercluster@^8.0.1
+58 silly packumentCache full:https://registry.npmjs.org/supercluster cache-miss
+59 silly fetch manifest fast-deep-equal@^3.1.3
+60 silly packumentCache full:https://registry.npmjs.org/fast-deep-equal cache-miss
+61 silly fetch manifest loose-envify@^1.0.0
+62 silly packumentCache full:https://registry.npmjs.org/loose-envify cache-miss
+63 http fetch GET 200 https://registry.npmjs.org/supercluster 35ms (cache miss)
+64 silly packumentCache full:https://registry.npmjs.org/supercluster set size:undefined disposed:false
+65 http fetch GET 200 https://registry.npmjs.org/fast-deep-equal 39ms (cache miss)
+66 silly packumentCache full:https://registry.npmjs.org/fast-deep-equal set size:undefined disposed:false
+67 http fetch GET 200 https://registry.npmjs.org/loose-envify 42ms (cache miss)
+68 silly packumentCache full:https://registry.npmjs.org/loose-envify set size:undefined disposed:false
+69 silly placeDep ROOT fast-deep-equal@3.1.3 OK for: @googlemaps/markerclusterer@2.5.3 want: ^3.1.3
+70 silly placeDep ROOT supercluster@8.0.1 OK for: @googlemaps/markerclusterer@2.5.3 want: ^8.0.1
+71 silly fetch manifest kdbush@^4.0.2
+72 silly packumentCache full:https://registry.npmjs.org/kdbush cache-miss
+73 http fetch GET 200 https://registry.npmjs.org/kdbush 49ms (cache miss)
+74 silly packumentCache full:https://registry.npmjs.org/kdbush set size:undefined disposed:false
+75 silly placeDep ROOT loose-envify@1.4.0 OK for: invariant@2.2.4 want: ^1.0.0
+76 silly fetch manifest js-tokens@^3.0.0 || ^4.0.0
+77 silly packumentCache full:https://registry.npmjs.org/js-tokens cache-miss
+78 http fetch GET 200 https://registry.npmjs.org/js-tokens 48ms (cache miss)
+79 silly packumentCache full:https://registry.npmjs.org/js-tokens set size:undefined disposed:false
+80 silly placeDep ROOT js-tokens@4.0.0 OK for: loose-envify@1.4.0 want: ^3.0.0 || ^4.0.0
+81 silly placeDep ROOT kdbush@4.0.2 OK for: supercluster@8.0.1 want: ^4.0.2
+82 silly reify moves {}
+83 silly audit bulk request {
+83 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+83 silly audit   '@emnapi/runtime': [ '1.5.0' ],
+83 silly audit   '@img/colour': [ '1.0.0' ],
+83 silly audit   '@img/sharp-darwin-arm64': [ '0.34.4' ],
+83 silly audit   '@img/sharp-darwin-x64': [ '0.34.4' ],
+83 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.2.3' ],
+83 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.2.3' ],
+83 silly audit   '@img/sharp-libvips-linux-arm': [ '1.2.3' ],
+83 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.2.3' ],
+83 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.2.3' ],
+83 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.2.3' ],
+83 silly audit   '@img/sharp-libvips-linux-x64': [ '1.2.3' ],
+83 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.2.3' ],
+83 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.2.3' ],
+83 silly audit   '@img/sharp-linux-arm': [ '0.34.4' ],
+83 silly audit   '@img/sharp-linux-arm64': [ '0.34.4' ],
+83 silly audit   '@img/sharp-linux-ppc64': [ '0.34.4' ],
+83 silly audit   '@img/sharp-linux-s390x': [ '0.34.4' ],
+83 silly audit   '@img/sharp-linux-x64': [ '0.34.4' ],
+83 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.34.4' ],
+83 silly audit   '@img/sharp-linuxmusl-x64': [ '0.34.4' ],
+83 silly audit   '@img/sharp-wasm32': [ '0.34.4' ],
+83 silly audit   '@img/sharp-win32-arm64': [ '0.34.4' ],
+83 silly audit   '@img/sharp-win32-ia32': [ '0.34.4' ],
+83 silly audit   '@img/sharp-win32-x64': [ '0.34.4' ],
+83 silly audit   '@isaacs/fs-minipass': [ '4.0.1' ],
+83 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+83 silly audit   '@jridgewell/remapping': [ '2.3.5' ],
+83 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+83 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+83 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+83 silly audit   '@next/env': [ '15.5.4' ],
+83 silly audit   '@next/swc-darwin-arm64': [ '15.5.4' ],
+83 silly audit   '@next/swc-darwin-x64': [ '15.5.4' ],
+83 silly audit   '@next/swc-linux-arm64-gnu': [ '15.5.4' ],
+83 silly audit   '@next/swc-linux-arm64-musl': [ '15.5.4' ],
+83 silly audit   '@next/swc-linux-x64-gnu': [ '15.5.4' ],
+83 silly audit   '@next/swc-linux-x64-musl': [ '15.5.4' ],
+83 silly audit   '@next/swc-win32-arm64-msvc': [ '15.5.4' ],
+83 silly audit   '@next/swc-win32-x64-msvc': [ '15.5.4' ],
+83 silly audit   '@react-leaflet/core': [ '3.0.0' ],
+83 silly audit   '@swc/helpers': [ '0.5.15' ],
+83 silly audit   '@tailwindcss/node': [ '4.1.14' ],
+83 silly audit   '@tailwindcss/oxide': [ '4.1.14' ],
+83 silly audit   '@tailwindcss/oxide-android-arm64': [ '4.1.14' ],
+83 silly audit   '@tailwindcss/oxide-darwin-arm64': [ '4.1.14' ],
+83 silly audit   '@tailwindcss/oxide-darwin-x64': [ '4.1.14' ],
+83 silly audit   '@tailwindcss/oxide-freebsd-x64': [ '4.1.14' ],
+83 silly audit   '@tailwindcss/oxide-linux-arm-gnueabihf': [ '4.1.14' ],
+83 silly audit   '@tailwindcss/oxide-linux-arm64-gnu': [ '4.1.14' ],
+83 silly audit   '@tailwindcss/oxide-linux-arm64-musl': [ '4.1.14' ],
+83 silly audit   '@tailwindcss/oxide-linux-x64-gnu': [ '4.1.14' ],
+83 silly audit   '@tailwindcss/oxide-linux-x64-musl': [ '4.1.14' ],
+83 silly audit   '@tailwindcss/oxide-wasm32-wasi': [ '4.1.14' ],
+83 silly audit   '@tailwindcss/oxide-win32-arm64-msvc': [ '4.1.14' ],
+83 silly audit   '@tailwindcss/oxide-win32-x64-msvc': [ '4.1.14' ],
+83 silly audit   '@tailwindcss/postcss': [ '4.1.14' ],
+83 silly audit   '@types/geojson': [ '7946.0.16' ],
+83 silly audit   '@types/leaflet': [ '1.9.21' ],
+83 silly audit   '@types/node': [ '20.19.21' ],
+83 silly audit   '@types/react': [ '19.2.2' ],
+83 silly audit   '@types/react-dom': [ '19.2.1' ],
+83 silly audit   'caniuse-lite': [ '1.0.30001749' ],
+83 silly audit   chownr: [ '3.0.0' ],
+83 silly audit   'client-only': [ '0.0.1' ],
+83 silly audit   csstype: [ '3.1.3' ],
+83 silly audit   'detect-libc': [ '2.1.2' ],
+83 silly audit   'enhanced-resolve': [ '5.18.3' ],
+83 silly audit   'graceful-fs': [ '4.2.11' ],
+83 silly audit   jiti: [ '2.6.1' ],
+83 silly audit   leaflet: [ '1.9.4' ],
+83 silly audit   lightningcss: [ '1.30.1' ],
+83 silly audit   'lightningcss-darwin-arm64': [ '1.30.1' ],
+83 silly audit   'lightningcss-darwin-x64': [ '1.30.1' ],
+83 silly audit   'lightningcss-freebsd-x64': [ '1.30.1' ],
+83 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.30.1' ],
+83 silly audit   'lightningcss-linux-arm64-gnu': [ '1.30.1' ],
+83 silly audit   'lightningcss-linux-arm64-musl': [ '1.30.1' ],
+83 silly audit   'lightningcss-linux-x64-gnu': [ '1.30.1' ],
+83 silly audit   'lightningcss-linux-x64-musl': [ '1.30.1' ],
+83 silly audit   'lightningcss-win32-arm64-msvc': [ '1.30.1' ],
+83 silly audit   'lightningcss-win32-x64-msvc': [ '1.30.1' ],
+83 silly audit   'magic-string': [ '0.30.19' ],
+83 silly audit   minipass: [ '7.1.2' ],
+83 silly audit   minizlib: [ '3.1.0' ],
+83 silly audit   nanoid: [ '3.3.11' ],
+83 silly audit   next: [ '15.5.4' ],
+83 silly audit   postcss: [ '8.4.31', '8.5.6' ],
+83 silly audit   picocolors: [ '1.1.1' ],
+83 silly audit   react: [ '19.1.0' ],
+83 silly audit   'react-dom': [ '19.1.0' ],
+83 silly audit   'react-leaflet': [ '5.0.0' ],
+83 silly audit   scheduler: [ '0.26.0' ],
+83 silly audit   semver: [ '7.7.3' ],
+83 silly audit   sharp: [ '0.34.4' ],
+83 silly audit   'source-map-js': [ '1.2.1' ],
+83 silly audit   'styled-jsx': [ '5.1.6' ],
+83 silly audit   tailwindcss: [ '4.1.14' ],
+83 silly audit   tapable: [ '2.3.0' ],
+83 silly audit   tar: [ '7.5.1' ],
+83 silly audit   tslib: [ '2.8.1' ],
+83 silly audit   typescript: [ '5.9.3' ],
+83 silly audit   'undici-types': [ '6.21.0' ],
+83 silly audit   yallist: [ '5.0.0' ],
+83 silly audit   '@react-google-maps/api': [ '2.20.7' ],
+83 silly audit   '@googlemaps/js-api-loader': [ '1.16.8' ],
+83 silly audit   '@googlemaps/markerclusterer': [ '2.5.3' ],
+83 silly audit   '@react-google-maps/infobox': [ '2.20.0' ],
+83 silly audit   '@react-google-maps/marker-clusterer': [ '2.20.0' ],
+83 silly audit   '@types/google.maps': [ '3.58.1' ],
+83 silly audit   invariant: [ '2.2.4' ],
+83 silly audit   'fast-deep-equal': [ '3.1.3' ],
+83 silly audit   supercluster: [ '8.0.1' ],
+83 silly audit   'loose-envify': [ '1.4.0' ],
+83 silly audit   'js-tokens': [ '4.0.0' ],
+83 silly audit   kdbush: [ '4.0.2' ]
+83 silly audit }
+84 http cache kdbush@https://registry.npmjs.org/kdbush/-/kdbush-4.0.2.tgz 0ms (cache hit)
+85 http cache loose-envify@https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz 0ms (cache hit)
+86 http cache supercluster@https://registry.npmjs.org/supercluster/-/supercluster-8.0.1.tgz 0ms (cache hit)
+87 http cache js-tokens@https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz 0ms (cache hit)
+88 http cache fast-deep-equal@https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz 0ms (cache hit)
+89 http cache invariant@https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz 0ms (cache hit)
+90 http cache @types/google.maps@https://registry.npmjs.org/@types/google.maps/-/google.maps-3.58.1.tgz 0ms (cache hit)
+91 http cache @react-google-maps/infobox@https://registry.npmjs.org/@react-google-maps/infobox/-/infobox-2.20.0.tgz 0ms (cache hit)
+92 http cache @googlemaps/markerclusterer@https://registry.npmjs.org/@googlemaps/markerclusterer/-/markerclusterer-2.5.3.tgz 0ms (cache hit)
+93 http cache @react-google-maps/api@https://registry.npmjs.org/@react-google-maps/api/-/api-2.20.7.tgz 0ms (cache hit)
+94 http cache @googlemaps/js-api-loader@https://registry.npmjs.org/@googlemaps/js-api-loader/-/js-api-loader-1.16.8.tgz 0ms (cache hit)
+95 http cache @react-google-maps/marker-clusterer@https://registry.npmjs.org/@react-google-maps/marker-clusterer/-/marker-clusterer-2.20.0.tgz 0ms (cache hit)
+96 silly tarball no local data for kdbush@https://registry.npmjs.org/kdbush/-/kdbush-4.0.2.tgz. Extracting by manifest.
+97 silly tarball no local data for loose-envify@https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz. Extracting by manifest.
+98 silly tarball no local data for supercluster@https://registry.npmjs.org/supercluster/-/supercluster-8.0.1.tgz. Extracting by manifest.
+99 silly tarball no local data for js-tokens@https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz. Extracting by manifest.
+100 silly tarball no local data for fast-deep-equal@https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz. Extracting by manifest.
+101 silly tarball no local data for invariant@https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz. Extracting by manifest.
+102 silly tarball no local data for @types/google.maps@https://registry.npmjs.org/@types/google.maps/-/google.maps-3.58.1.tgz. Extracting by manifest.
+103 silly tarball no local data for @react-google-maps/infobox@https://registry.npmjs.org/@react-google-maps/infobox/-/infobox-2.20.0.tgz. Extracting by manifest.
+104 silly tarball no local data for @googlemaps/markerclusterer@https://registry.npmjs.org/@googlemaps/markerclusterer/-/markerclusterer-2.5.3.tgz. Extracting by manifest.
+105 silly tarball no local data for @react-google-maps/api@https://registry.npmjs.org/@react-google-maps/api/-/api-2.20.7.tgz. Extracting by manifest.
+106 silly tarball no local data for @googlemaps/js-api-loader@https://registry.npmjs.org/@googlemaps/js-api-loader/-/js-api-loader-1.16.8.tgz. Extracting by manifest.
+107 silly tarball no local data for @react-google-maps/marker-clusterer@https://registry.npmjs.org/@react-google-maps/marker-clusterer/-/marker-clusterer-2.20.0.tgz. Extracting by manifest.
+108 http fetch GET 200 https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz 54ms (cache miss)
+109 http fetch GET 200 https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz 54ms (cache miss)
+110 http fetch GET 200 https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz 54ms (cache miss)
+111 http fetch GET 200 https://registry.npmjs.org/kdbush/-/kdbush-4.0.2.tgz 55ms (cache miss)
+112 http fetch GET 200 https://registry.npmjs.org/supercluster/-/supercluster-8.0.1.tgz 54ms (cache miss)
+113 http fetch GET 200 https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz 94ms (cache miss)
+114 http fetch GET 200 https://registry.npmjs.org/@types/google.maps/-/google.maps-3.58.1.tgz 122ms (cache miss)
+115 http fetch GET 200 https://registry.npmjs.org/@googlemaps/markerclusterer/-/markerclusterer-2.5.3.tgz 133ms (cache miss)
+116 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 144ms
+117 silly audit report {
+117 silly audit report   next: [
+117 silly audit report     {
+117 silly audit report       id: 1111275,
+117 silly audit report       url: 'https://github.com/advisories/GHSA-9qr9-h5gf-34mp',
+117 silly audit report       title: 'Next.js is vulnerable to RCE in React flight protocol',
+117 silly audit report       severity: 'critical',
+117 silly audit report       vulnerable_versions: '>=15.5.0-canary.0 <15.5.7',
+117 silly audit report       cwe: [Array],
+117 silly audit report       cvss: [Object]
+117 silly audit report     }
+117 silly audit report   ],
+117 silly audit report   tar: [
+117 silly audit report     {
+117 silly audit report       id: 1109463,
+117 silly audit report       url: 'https://github.com/advisories/GHSA-29xp-372q-xqph',
+117 silly audit report       title: 'node-tar has a race condition leading to uninitialized memory exposure',
+117 silly audit report       severity: 'moderate',
+117 silly audit report       vulnerable_versions: '=7.5.1',
+117 silly audit report       cwe: [Array],
+117 silly audit report       cvss: [Object]
+117 silly audit report     }
+117 silly audit report   ]
+117 silly audit report }
+118 silly packumentCache corgi:https://registry.npmjs.org/next cache-miss
+119 silly packumentCache corgi:https://registry.npmjs.org/tar cache-miss
+120 http fetch GET 200 https://registry.npmjs.org/@react-google-maps/marker-clusterer/-/marker-clusterer-2.20.0.tgz 139ms (cache miss)
+121 http fetch GET 200 https://registry.npmjs.org/@googlemaps/js-api-loader/-/js-api-loader-1.16.8.tgz 147ms (cache miss)
+122 http fetch GET 200 https://registry.npmjs.org/@react-google-maps/infobox/-/infobox-2.20.0.tgz 157ms (cache miss)
+123 http fetch GET 200 https://registry.npmjs.org/tar 76ms (cache miss)
+124 silly packumentCache corgi:https://registry.npmjs.org/tar set size:undefined disposed:false
+125 http fetch GET 200 https://registry.npmjs.org/@react-google-maps/api/-/api-2.20.7.tgz 229ms (cache miss)
+126 http fetch GET 200 https://registry.npmjs.org/next 729ms (cache miss)
+127 silly packumentCache corgi:https://registry.npmjs.org/next set size:undefined disposed:false
+128 silly packumentCache corgi:https://registry.npmjs.org/@tailwindcss%2foxide cache-miss
+129 http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2foxide 128ms (cache miss)
+130 silly packumentCache corgi:https://registry.npmjs.org/@tailwindcss%2foxide set size:undefined disposed:false
+131 silly ADD node_modules/kdbush
+132 silly ADD node_modules/js-tokens
+133 silly ADD node_modules/loose-envify
+134 silly ADD node_modules/supercluster
+135 silly ADD node_modules/fast-deep-equal
+136 silly ADD node_modules/invariant
+137 silly ADD node_modules/@types/google.maps
+138 silly ADD node_modules/@react-google-maps/marker-clusterer
+139 silly ADD node_modules/@react-google-maps/infobox
+140 silly ADD node_modules/@googlemaps/markerclusterer
+141 silly ADD node_modules/@googlemaps/js-api-loader
+142 silly ADD node_modules/@react-google-maps/api
+143 verbose cwd /Users/vyas/code/parking-map/parking-map-ui
+144 verbose os Darwin 24.6.0
+145 verbose node v25.2.1
+146 verbose npm  v11.6.2
+147 verbose exit 0
+148 info ok
