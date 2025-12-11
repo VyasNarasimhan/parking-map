@@ -17,6 +17,7 @@ const FLASK_API_URL = "http://127.0.0.1:5000";
 const MAP_CENTER: LatLngLiteral = { lat: 38.0336, lng: -78.5080 };
 const INITIAL_ZOOM = 17;
 const ZOOM_THRESHOLD = 18;
+const ID_LABEL_ZOOM = 20; // Show ID labels only when zoomed in further
 const MAP_CONTAINER_STYLE = { width: '100%', height: '100vh' };
 
 const availabilityColor = (percentageOpen: number) => {
@@ -30,7 +31,7 @@ const toLatLngLiteral = (coords: LatLngTuple[]): LatLngLiteral[] =>
 
 // --- Helper Component to manage zoom-based rendering ---
 const ParkingLayers = ({ lots, zoom }: { lots: any[]; zoom: number }) => {
-  return zoom < ZOOM_THRESHOLD ? <SummaryView lots={lots} /> : <DetailedView lots={lots} />;
+  return zoom < ZOOM_THRESHOLD ? <SummaryView lots={lots} /> : <DetailedView lots={lots} zoom={zoom} />;
 };
 
 // --- Component for the "Zoomed Out" Summary View ---
@@ -111,25 +112,69 @@ const SummaryView = ({ lots }: { lots: any[] }) => {
 };
 
 // --- Component for the "Zoomed In" Detailed View ---
-const DetailedView = ({ lots }: { lots: any[] }) => {
+const DetailedView = ({ lots, zoom }: { lots: any[]; zoom: number }) => {
+  const showLabels = zoom >= ID_LABEL_ZOOM;
+
   return (
     <>
       {lots.map((lot) =>
-        lot.spaces.map((space: any) => (
-          <GPolygon
-            key={space.id}
-            path={toLatLngLiteral(space.coords)}
-            options={{
-              strokeColor: space.occupied ? '#8b0000' : '#006400', // darker border
-              fillColor: space.occupied ? '#e74c3c' : '#2ecc71',
-              strokeWeight: 1.5,
-              fillOpacity: 0.9
-            }}
-            onClick={() =>
-              alert(`${lot.name} - Space ${space.id} (${space.occupied ? 'Occupied' : 'Available'})`)
-            }
-          />
-        ))
+        lot.spaces.map((space: any) => {
+          const spacePath = toLatLngLiteral(space.coords);
+          const center_point: LatLngLiteral = spacePath.reduce(
+            (avg, point) => ({
+              lat: avg.lat + point.lat / spacePath.length,
+              lng: avg.lng + point.lng / spacePath.length
+            }),
+            { lat: 0, lng: 0 }
+          );
+
+          // Create label icon for the spot ID (only if zoomed in enough)
+          const labelIcon: google.maps.Icon = {
+            url: `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`
+              <svg width="40" height="20" xmlns="http://www.w3.org/2000/svg">
+                <foreignObject width="40" height="20">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="
+                    text-align: center;
+                    font-size: 11px;
+                    font-weight: 700;
+                    color: #fff;
+                    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), -1px -1px 2px rgba(0, 0, 0, 0.8), 1px -1px 2px rgba(0, 0, 0, 0.8), -1px 1px 2px rgba(0, 0, 0, 0.8);
+                    font-family: sans-serif;
+                    white-space: nowrap;
+                  ">
+                    ${space.id}
+                  </div>
+                </foreignObject>
+              </svg>
+            `)}`,
+            scaledSize: new google.maps.Size(40, 20),
+            anchor: new google.maps.Point(20, 10),
+          };
+
+          return (
+            <React.Fragment key={space.id}>
+              <GPolygon
+                path={spacePath}
+                options={{
+                  strokeColor: space.occupied ? '#8b0000' : '#006400', // darker border
+                  fillColor: space.occupied ? '#e74c3c' : '#2ecc71',
+                  strokeWeight: 1.5,
+                  fillOpacity: 1.0
+                }}
+                onClick={() =>
+                  alert(`${lot.name} - Space ${space.id} (${space.occupied ? 'Occupied' : 'Available'})`)
+                }
+              />
+              {showLabels && (
+                <Marker
+                  position={center_point}
+                  icon={labelIcon}
+                  clickable={false}
+                />
+              )}
+            </React.Fragment>
+          );
+        })
       )}
     </>
   );
